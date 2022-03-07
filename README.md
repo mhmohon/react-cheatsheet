@@ -35,9 +35,6 @@ const [count, setCount] = useState(initialCount);
 // `initialCount` initial value
 ```
 
-See also the [Using Inferred Types](https://react-typescript-cheatsheet.netlify.app/docs/basic/troubleshooting/types/#using-inferred-types) section if you need to use a complex type that you've relied on inference for.
-
-However, many hooks are initialized with null-ish default values, and you may wonder how to provide types. Explicitly declare the type, and use a union type:
 Example:
 ```js
 import React, { useState } from 'react';

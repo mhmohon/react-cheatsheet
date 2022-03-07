@@ -38,16 +38,57 @@ const [count, setCount] = useState(initialCount);
 See also the [Using Inferred Types](https://react-typescript-cheatsheet.netlify.app/docs/basic/troubleshooting/types/#using-inferred-types) section if you need to use a complex type that you've relied on inference for.
 
 However, many hooks are initialized with null-ish default values, and you may wonder how to provide types. Explicitly declare the type, and use a union type:
-
+Example:
 ```js
-const [user, setUser] = React.useState<IUser | null>(null);
+import React, { useState } from 'react';
 
-// later...
-setUser(newUser);
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
 ```
-
+> Never modify the state manually.
 ## useEffect / useLayoutEffect
 
+By default, React runs the effects after every render — including the first render
+```js
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  }, [count]);
+  // `[]` dependency array for the trigger useEffect function. If it is empty then it will load only initalComponent load.
+  // `[count]` the trigger variable names. useEffect will call each time those value will changed.
+```
+Example:
+```js
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [count]);
+ 
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
 <!--END-SECTION:hooks-->
 
 ## Contributors

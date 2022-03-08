@@ -3,16 +3,13 @@
 </div>
 
 ### Table of Contents
-
-<summary><b>Expand Table of Contents</b></summary>
-
 - [Section 1: Initial Setup](#section-1-setup-typescript-with-react)
   - [Prerequisites](#prerequisites)
   - [Import React](#import-react)
 - [Section 2: Getting Started](#section-2-getting-started)
   - [Function Components](#function-components)
-  - [Hooks](#hooks)
-  - [useState](#usestate)
+  - [Hooks](https://github.com/mhmohon/react-cheatsheet/blob/master/hooks.md)
+  - [useState](https://github.com/mhmohon/react-cheatsheet/blob/master/hooks.md#usestate)
   - [useReducer](#usereducer)
   - [useEffect](#useeffect)
   - [useRef](#useref)
@@ -102,6 +99,10 @@ function Example() {
 }
 ```
 <!--END-SECTION:hooks-->
+### Reference
+- [React Hooks Cheatsheet](https://react-hooks-cheatsheet.surge.sh/)
+
+
 ## Contributors
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. See [CONTRIBUTORS.md](/CONTRIBUTORS.md) for the full list. Contributions of any kind welcome!
